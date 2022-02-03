@@ -1,0 +1,447 @@
+/* Reseteo del CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Carga de un fonts */
+
+@font-face {
+    font-family: Lobster;
+    src: url('/fonts/Lobster/Lobster.ttf') format('truetype');
+
+}
+
+/* RESPONSIVE DESIGN DESCKTOP */
+/* Estilos Generales */
+
+body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+
+}
+
+/* ESTILOS HEADER */
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: #B762C1; */
+    background-image: linear-gradient(to right, #FFCDDD ,#B762C1);
+
+   
+}
+
+.logoNav img{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: flex-start;
+    margin-left: 20px;
+
+
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+}
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu a:hover{
+    background-color: #EA99D5;
+    border-radius: 5px;
+}
+.nav li{
+    margin: 0px 5px;
+}
+.nav li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+.li--aResaltado{
+        background-color: #6155A6;
+        border-radius: 5px;
+}
+
+
+/* USANDO GRID PARA EL INDEX Y LA SECCION "NOSOTROS" */
+
+.main__grid{
+    height: 100%;
+    display: grid;
+    grid-template-areas: "titulo     titulo"
+                         "titulo2    imagen"                           
+                         "texto      imagen"
+                         "footer     footer";
+    grid-template-columns: 60% 40% ;
+    grid-template-rows: auto 50px auto auto;       
+    justify-content: center;             
+}
+ 
+.h1Main{
+    grid-area: titulo;
+    font-family: Lobster, Arial, Helvetica, sans-serif;
+    background-color:rgb(243, 230, 207);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.h2Main{
+    grid-area: titulo2;
+    font-family: Lobster, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.pInicio{
+    grid-area: texto;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.aside{
+    grid-area: imagen;
+}
+
+.aside__image{
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    margin: 15px;
+}
+
+/* FOOTER */
+.footer{
+    grid-area: footer;
+    background-color:rgb(243, 230, 207);  
+    margin-top: auto;
+    text-align: center;
+    height: 50px;
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.form{
+    margin: auto;
+}
+
+.tabla__galeria{
+    margin: auto;
+}
+.iframe__ubicacion{
+    margin-top: 50px;
+    border:#6155A6 solid;
+    margin: auto;
+}
+
+/* RESPONSIVE DESIGN TABLET Y PHONE */
+
+/* TABLETS */
+@media  (min-width: 480px) and (max-width: 1023px){
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+     
+     }
+     
+     .header{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         background-color: #B762C1;
+        
+     }
+     
+     .logoNav img{
+         display: flex;
+         width: 150px;
+         height: 150px;
+         justify-content: flex-start;
+         margin-left: 20px;
+     
+     }
+     .nav{
+         display: flex;
+         align-items: center;
+         font-family: Arial, Helvetica, sans-serif;
+         justify-content: flex-end;
+         flex-wrap: nowrap;
+         margin-right: 10px;
+     
+     }
+     .menu{
+         display: flex;
+         list-style: none;
+     }
+     .menu a:hover{
+         background-color: #EA99D5;
+         border-radius: 5px;
+     }
+     .nav li{
+         margin: 0px 5px;
+     
+     }
+     
+     .nav li a{
+         text-decoration: none;
+         color: white;
+         font-weight: bold;
+         font-size: 20px;
+         display: block;
+         text-transform: uppercase;
+         padding: 7px 10px;
+         border-radius: 8px;
+     }
+     .li--aResaltado{
+             background-color: #6155A6;
+             border-radius: 5px;
+     }
+     .h1Main{
+         font-family: Lobster, Arial, Helvetica, sans-serif;
+         background-color:rgb(243, 230, 207);   
+     }
+     
+     /* USANDO GRID PARA EL INDEX Y LA SECCION "NOSOTROS" */
+     
+     .main__grid{
+         height: 100%;
+         display: grid;
+         grid-template-areas: "titulo     titulo"
+                              "titulo2    imagen"                           
+                              "texto      imagen"
+                              "footer     footer";
+         grid-template-columns: 60% 40% ;
+         grid-template-rows: auto 50px auto auto;       
+         justify-content: center;             
+     }
+      
+     .h1Main{
+         grid-area: titulo;
+         text-align: center;
+         margin-bottom: 20px;
+     }
+     .h2Main{
+         grid-area: titulo2;
+         font-family: Lobster, Arial, Helvetica, sans-serif;
+         text-align: center;
+     }
+     
+     .pInicio{
+         grid-area: texto;
+         font-size: 20px;
+         text-align: center;
+         margin-left: 50px;
+         margin-right: 50px;
+     }
+     
+     .aside{
+         grid-area: imagen;
+     }
+     
+     .aside__image{
+         display: flex;
+         max-width: 100%;
+         max-height: 100%;
+         margin: auto;
+         margin-bottom: 5px;
+         
+     }
+     
+
+     .main{
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+     }
+     .form{
+         margin: auto;
+     }
+     
+     .tabla__galeria{
+         margin: auto;
+     }
+     .iframe__ubicacion{
+         margin-top: 50px;
+         border:#6155A6 solid;
+         margin: auto;
+     }
+
+     /* FOOTER */
+    .footer{
+     grid-area: footer;
+     background-color:rgb(243, 230, 207);  
+     margin-top: auto;
+     text-align: center;
+     height: 50px;
+            
+        }     
+}
+
+
+
+/* SMARTPHONES */
+
+@media (max-width: 479px){
+
+
+    /* USO GRID DE UNA SOLA COLUMNA Y FLEXBOX */
+    .main__grid{
+        height: 100%;
+        display: grid;
+        grid-template-areas: "header"
+                             "titulo "
+                             "titulo2"                           
+                             "texto"
+                             "imagen"
+                             "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 50px auto auto;       
+        justify-content: center;             
+    }
+    .header{
+         grid-area: header;
+    }
+    /* TITULO H1 */
+    .h1Main{
+        grid-area: titulo;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    /* TITULO H2 */
+    .h2Main{
+        grid-area: titulo2;
+        font-family: Lobster, Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    /* PARRAFO INICIO */
+    .pInicio{
+        grid-area: texto;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 15px;
+    }
+    /* ASIDE */
+    .aside{
+        grid-area: imagen;
+    }
+    
+    .aside__image{
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #B762C1;
+    }
+    
+    .logoNav img{
+        display: flex;
+        width: 150px;
+        height: 150px;
+        justify-content: flex-start;
+        margin-left: 20px;
+    
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        margin-right: 10px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+    .menu a:hover{
+        background-color: #EA99D5;
+        border-radius: 5px;
+    }
+    .nav li{
+        margin: 0px 5px;
+    }
+    
+    .nav li a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        display: block;
+        text-transform: uppercase;
+        padding: 7px 10px;
+        border-radius: 8px;
+    }
+    .li--aResaltado{
+            background-color: #6155A6;
+            border-radius: 5px;
+    }
+
+    /* FOOTER */
+    .footer{
+        grid-area: footer;
+        background-color:rgb(243, 230, 207);  
+        margin-top: auto;
+        text-align: center;
+        height: 50px;
+        
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .tabla__galeria{
+        margin: auto;
+        align-self: center;
+    }
+    .img_galeria{
+        width: 200px;
+        height: 100px;
+    }
+    .iframe__ubicacion{
+        border:#6155A6 solid;
+        margin: auto;
+
+        
+           
+    }
+    .iframe__ubicacion{
+        display: flex;
+
+        width: 100%;
+        height: 300px;
+        
+    }
+}
